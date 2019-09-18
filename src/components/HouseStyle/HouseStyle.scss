@@ -1,0 +1,108 @@
+@import "../../ScssVariables.scss";
+
+.HouseStyle {
+  position: absolute;
+  top: $ContactBarHeight;
+  left: 0;
+  width: 100%;
+  height: 100% - $ContactBarHeight - ($NavBarHeight * 0.62);
+  border: 1px solid red;
+  // 上方标题
+  .top {
+    border: 1px solid white;
+    height: 18%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 60%;
+      max-width: 95%;
+      border: 1px solid white;
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+  // 中间序列祯
+  .center {
+    border: 1px solid white;
+    height: 60%;
+  }
+  // 下方杂项
+  .bottom {
+    border: 1px solid white;
+    height: 22%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    .left {
+      display: inline-block;
+      height: 80%;
+      width: 40%;
+      border: 1px solid green;
+      position: relative;
+      .smallMap {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 85%;
+        // 小地圖背景
+        .smallMapBg {
+          width: 100%;
+        }
+        // 覆蓋
+        .cover {
+          position: absolute;
+          &.hide {
+            opacity: 0;
+          }
+          // 戶型1覆蓋
+          &.one {
+            top: 25.2%;
+            left: 57%;
+            width: 42%;
+          }
+          // 戶型2覆蓋
+          &.two {
+            top: 26%;
+            left: 15%;
+            width: 42%;
+          }
+        }
+      }
+    }
+    .center {
+      display: inline-block;
+      height: 80%;
+      width: 30%;
+      border: 1px solid yellow;
+      position: relative;
+      .button {
+        border: 1px solid white;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        .button1 {
+            width: 40%;
+        }
+        .button2 {
+            width: 40%;
+        }
+      }
+    }
+    .right {
+      display: inline-block;
+      height: 90%;
+      width: 30%;
+      border: 1px solid orange;
+      position: relative;
+      .rightBottomMenu {
+        border: 1px solid white;
+        position: absolute;
+      }
+    }
+  }
+}

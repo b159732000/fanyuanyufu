@@ -1,0 +1,90 @@
+@import "../../ScssVariables.scss";
+
+.ContactBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $ContactBarHeight;
+  -webkit-box-shadow: 0px 10px 20px 11px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 20px 11px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 20px 11px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.31));
+  z-index: 99999;
+  // 電話和聊天
+  .left {
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    height: 40%;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    .icon {
+      display: inline-block;
+      height: 100%;
+      margin-right: 50%;
+      img {
+        height: 100%;
+      }
+      &.phone {
+      }
+      &.message {
+      }
+    }
+  }
+  // 人大頭貼、姓名、電話
+  .right {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    height: 80%;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    // 姓名、電話
+    .leftContainer {
+      display: inline-flex;
+      position: relative;
+      height: 70%;
+      align-content: space-between;
+      flex-wrap: wrap;
+      margin-right: 4%;
+      & > div {
+        color: #d8a271;
+        font-size: 0.8rem;
+        text-align: end;
+        width: 100%;
+        font-weight: 600;
+      }
+      .name {
+      }
+      .phone {
+      }
+    }
+    // 大頭貼
+    .portrait {
+      height: 100%;
+      border: 2px solid #d8a271;
+      border-radius: 50%;
+      display: inline-block;
+      img {
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+  }
+  // 下方分隔線
+  .separationLine {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
